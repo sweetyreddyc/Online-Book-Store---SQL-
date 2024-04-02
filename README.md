@@ -1,7 +1,3 @@
-Sure! Below is a basic outline for a README file for your book store project. You can expand and customize it further based on your project's specific details and requirements.
-
----
-
 # Book Store Database Project
 
 This project is a simple database system for managing a book store. It consists of several tables to store information about authors, books, customers, orders, and order details.
