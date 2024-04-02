@@ -96,6 +96,7 @@ SELECT b.title AS BookTitle, a.authorName AS AuthorName
 FROM books b
 INNER JOIN authors a ON b.authorID = a.authorID;
 
+
 SELECT o.orderID, c.firstName AS FirstName, c.lastName AS LastName, o.totalAmount, o.orderDate, o.address
 FROM orders o
 INNER JOIN customers c ON o.customerID = c.customerID;
