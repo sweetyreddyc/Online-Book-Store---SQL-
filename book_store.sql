@@ -81,3 +81,28 @@ INSERT INTO orderDetails (orderID, bookID, qunatity, price) VALUES
 (2, 3, 1, 17.99),
 (3, 4, 1, 9.99),
 (3, 5, 1, 11.99);
+
+SELECT * FROM authors;
+
+SELECT * FROM books;
+
+SELECT * FROM customers;
+
+SELECT * FROM orders;
+
+SELECT * FROM orderDetails;
+
+SELECT b.title AS BookTitle, a.authorName AS AuthorName
+FROM books b
+INNER JOIN authors a ON b.authorID = a.authorID;
+
+SELECT o.orderID, c.firstName AS FirstName, c.lastName AS LastName, o.totalAmount, o.orderDate, o.address
+FROM orders o
+INNER JOIN customers c ON o.customerID = c.customerID;
+
+SELECT orderID, SUM(price * quantity) AS TotalAmount
+FROM orderDetails
+GROUP BY orderID;
+
+SELECT * FROM orders ORDER BY orderDate DESC LIMIT 5;
+
